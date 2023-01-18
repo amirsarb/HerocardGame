@@ -1,0 +1,36 @@
+.Herocard {
+	width: 180px;
+	padding: 10px;
+	margin: 1rem;
+	box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.59);
+	text-align: center;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.Herocard-text {
+	font-size: 80%;
+}
+
+.Herocard-title {
+	margin-bottom: 1rem;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.Herocard-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	background-color: #eceff1ea;
+	border-radius: 3px;
+	margin-bottom: 1rem;
+}
+.Herocard img {
+	transition: all ease 500ms;
+}
+.Herocard img:hover {
+	transform: scale(1.2);
+	opacity: 0.6;
+}

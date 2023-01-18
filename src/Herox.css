@@ -1,0 +1,16 @@
+.Herox {
+	text-align: center;
+}
+.Herox-cards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.Herox-winner {
+	color: #4caf50;
+}
+
+.Herox-loser {
+	color: #e91e63;
+}
