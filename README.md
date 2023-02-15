@@ -1,3 +1,88 @@
+<div>
+  <h1 align="center">HeroCard game in React 🧑‍💻</h1>
+  <p><strong>This is a simple practice for React</strong></p>
+<h2 style="">Goal:</h2>
+  <ul>
+  <li>
+  Practicing component / render / defaultProps / function
+  </li>
+    
+   </ul>
+
+  <p>
+    Screenshot:
+  </p>
+
+  <a href="">
+    <img
+      alt="Hero Card"
+      src="screenshot.jpg"
+    />
+  </a>
+</div>
+
+<hr />
+
+## Requirements
+- NPM
+- React
+
+## Main Components
+- HeroGame
+- Herox
+- Herocard
+
+
+`HeroGame component`
+This is the main component contains:
+- defaultProps : Array of 8 object (Heros data).
+- Calculating the winner.
+- Heros data : https://cdn.jsdelivr.net/gh/akabab/.
+- Rendering Herox.
+
+
+```javascript
+render(){
+        let hand1 = [];
+		let hand2 = [ ...this.props.herolist ];
+		while (hand1.length < hand2.length) {
+			let randIdx = Math.floor(Math.random() * hand2.length);
+			let randHero = hand2.splice(randIdx, 1)[0];
+			hand1.push(randHero);
+		}
+		let total1 = total(hand1);
+		let total2 = total(hand2);
+		
+		return (
+			<div>
+				
+                 <Herox herolist={hand1} total={total1} isWinner={total1 > total2} />
+				<Herox herolist={hand2} total={total2} isWinner={total2 > total1} /> 
+			</div>
+		);
+```
+
+`Herox component`
+This component shows the winner and also renders Herocard with props.
+
+```javascript
+if (this.props.isWinner) {
+  title = <h1 className="Herox-winner">Winner Hand</h1>;
+} else {
+  title = <h1 className="Herox-loser">Looser Hand</h1>;
+}
+return (
+  <div className="Herox">
+    {title}
+    <h4>Total : {this.props.total}</h4>
+    <div className="Herox-cards">
+      {this.props.herolist.map((hero) => (
+       <Herocard id={hero.id} name={hero.name} img={hero.img} speed={hero.speed} power={hero.power} combat={hero.combat} />
+      ))}
+    </div>
+  </div>
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

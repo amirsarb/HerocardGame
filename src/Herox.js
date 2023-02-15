@@ -3,7 +3,6 @@ import './Herox.css'
 import Herocard from "./Herocard";
 
 class Herox extends Component{
-// <Herocard id={hero.id} name={hero.name} speed={hero.speed} power={hero.power} combat={hero.combat} />
 render(){
 
 let title;

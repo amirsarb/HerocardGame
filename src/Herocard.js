@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import './Herocard.css'
 
-
-
 class Herocard extends Component {
   
   render(){  
